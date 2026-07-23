@@ -63,6 +63,7 @@ db.sqlite3-journal
 
 # Flask stuff:
 instance/
+
 .webassets-cache
 
 # Scrapy stuff:
@@ -216,3 +217,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dataset
+/dataset
+
+# Work artefacts
+/artefacts
+
+# Model training
+/experiments
+
+# Test files
+/backups
+
+node_modules/
+dist/
+.vite/

@@ -1,0 +1,30 @@
+[project]
+name = "vk-image-enhancement-model"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "kagglehub>=1.0.2",
+    "matplotlib>=3.11.0",
+    "onnx>=1.22.0",
+    "opencv-python>=5.0.0.93",
+    "scikit-image>=0.26.0",
+    "scikit-learn>=1.9.0",
+    "torch>=2.13.0",
+    "tqdm>=4.68.4",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu130", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu130", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
